@@ -1,0 +1,13 @@
+# Temporary system files
+.DS_Store
+*.swp
+*~
+
+# Local artifacts
+out/
+obj/
+*.pyc
+
+# Ide files
+.vscode/
+.idea/
