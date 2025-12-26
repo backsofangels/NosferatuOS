@@ -1,0 +1,1 @@
+add_lunch_combo nosferatu_emu_x86_64-userdebug
