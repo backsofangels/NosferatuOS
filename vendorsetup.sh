@@ -1,0 +1,2 @@
+add_lunch_combo nos_emu_x86-userdebug
+add_lunch_combo nos_emu_x86_64-userdebug

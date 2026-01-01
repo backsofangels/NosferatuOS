@@ -1,0 +1,19 @@
+# ==========================================
+# Platform Specific - x86 Emulator Logic
+# ==========================================
+
+# Display Density (160=MDPI, standard for x86_64 emulator)
+ro.sf.lcd_density=160
+
+# Force navigation bar (soft keys) for emulator window
+qemu.hw.mainkeys=0
+
+# Graphics Rendering stack for Goldfish/Ranchu
+ro.kernel.qemu=1
+ro.kernel.qemu.gles=1
+ro.opengles.version=131072
+
+# Performance: Dalvik VM heap tuning for 2GB RAM [web:62]
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=192m
