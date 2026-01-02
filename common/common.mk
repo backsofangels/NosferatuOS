@@ -19,26 +19,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.hw_quickboot=true \
     persist.sys.force_highendgfx=false
 
-# --- Core System Binaries ---
-# Standard UNIX and Android tools required for stable system operation
-# Includes the adbd_system symlink module for professional ADB management
-PRODUCT_PACKAGES += \
-    adbd \
-    adbd_system \
-    sh \
-    mksh \
-    toolbox \
-    toybox \
-    logd \
-    logcat \
-    servicemanager \
-    vold \
-    netd \
-    e2fsck
 
 # --- Nosferatu OS Minimal App Suite ---
 # Default applications included in every build of the OS
 PRODUCT_PACKAGES += \
+    adbd_system \
     ExactCalculator \
     Calendar \
     Email \
@@ -46,7 +31,5 @@ PRODUCT_PACKAGES += \
     Music \
     QuickSearchBox
 
-# --- Filesystem Configuration ---
-# Use the custom filesystem config for professional permission management
-TARGET_ANDROID_FILESYSTEM_CONFIG_H := device/nosferatu/common/android_filesystem_config.h
+# Custom system props
 TARGET_DEVICE_SYS_PROPS += device/nosferatu/common/system.prop.

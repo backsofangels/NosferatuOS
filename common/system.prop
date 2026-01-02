@@ -3,7 +3,7 @@
 # ==========================================
 
 # Displayed in Settings > About Phone
-ro.nosferatu.version=1.0-NIGHTLY
+ro.nosferatu.version=0.0.1-NIGHTLY
 ro.nosferatu.build.date=20260101
 ro.nosferatu.maintainer=backs
 
@@ -13,3 +13,9 @@ ro.nosferatu.display.version=NosferatuOS-v0.0.1-Alpha
 # Privacy & Global Tweaks
 ro.config.nocheckin=1
 ro.com.google.clientidbase=android-nosferatu
+
+# Display Density (160=MDPI, standard for x86_64 emulator)
+ro.sf.lcd_density=160
+
+# Mainkeys settings otherwise no back key???
+qemu.hw.mainkeys=0

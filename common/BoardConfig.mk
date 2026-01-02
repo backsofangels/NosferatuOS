@@ -4,6 +4,8 @@
 # This file is inherited by ALL Nosferatu devices
 # It handles build optimizations, global security policies, and permission management.
 
+include build/target/board/generic/BoardConfig.mk
+
 # -----------------------------------------------------------------------------
 # GLOBAL SECURITY POLICIES
 # -----------------------------------------------------------------------------
@@ -38,8 +40,3 @@ DEXPREOPT_BOOT_JARS_ONLY := false
 # Tuning the dex2oat toolchain for WSL2 stability.
 PRODUCT_DEXPREOPT_BOOT_FLAGS += --compile-pic
 PRODUCT_DEXPREOPT_BOOT_FLAGS += --runtime-arg -Xms256m --runtime-arg -Xmx512m
-
-# -----------------------------------------------------------------------------
-# GLOBAL FILESYSTEM DEFAULTS
-# -----------------------------------------------------------------------------
-TARGET_USERIMAGES_USE_EXT4 := true
