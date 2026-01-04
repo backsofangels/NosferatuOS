@@ -19,17 +19,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.hw_quickboot=true \
     persist.sys.force_highendgfx=false
 
-
-# --- Nosferatu OS Minimal App Suite ---
-# Default applications included in every build of the OS
-PRODUCT_PACKAGES += \
-    adbd_system \
-    ExactCalculator \
-    Calendar \
-    Email \
-    Gallery2 \
-    Music \
-    QuickSearchBox
-
 # Custom system props
-TARGET_DEVICE_SYS_PROPS += device/nosferatu/common/system.prop.
+TARGET_DEVICE_SYS_PROPS += device/nosferatu/common/system.prop
+
+# ===== App customizations include + exclude + overrides ===== #
+PRODUCT_PACKAGES += \
+    KOReader \
+    NosferatuLauncher 
+
+PRODUCT_COPY_FILES += \
+    vendor/nosferatu/configs/preferred-apps.xml:system/etc/preferred-apps.xml
