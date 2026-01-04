@@ -4,6 +4,7 @@
 
 # ===== Inherit Emulator Template ===== #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_x86_64.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_phone_x86_64.mk)
 
 # ===== Inherit Nosferatu Customizations ===== #
 $(call inherit-product, device/nosferatu/common/common.mk)
