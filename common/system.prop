@@ -1,0 +1,22 @@
+# ==========================================
+# Nosferatu OS - Global Identity (Nightly)
+# ==========================================
+
+# Displayed in Settings > About Phone
+ro.nosferatu.version=0.0.1-NIGHTLY
+ro.nosferatu.build.date=20260102
+ro.nosferatu.maintainer=backs
+
+# Custom release string for the UI
+ro.nosferatu.display.version=NosferatuOS-v0.0.1-Alpha
+
+# Privacy & Global Tweaks
+ro.config.nocheckin=1
+ro.com.google.clientidbase=android-nosferatu
+
+# Display Density (160=MDPI, standard for x86_64 emulator)
+ro.sf.lcd_density=160
+
+# Mainkeys settings otherwise no back/home/recents keys
+qemu.hw.mainkeys=0
+ro.config.nav_bar_interactive=true

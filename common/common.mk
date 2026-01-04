@@ -1,22 +1,31 @@
-# OS Info
-PRODUCT_BRAND := Nosferatu
-PRODUCT_MANUFACTURER := NosferatuProject
-PRODUCT_MODEL := Nosferatu OS v1.0
+# =============================================================================
+# Nosferatu OS - Global Software Definition
+# =============================================================================
+# This file contains the software stack and properties shared by all 
+# Nosferatu OS devices. Hardware-specific HALs belong in platform common folders
 
-# Optimizations
+# --- OS Identity ---
+# Branding displayed in "About Phone" and system properties
+PRODUCT_BRAND           := Nosferatu
+PRODUCT_MANUFACTURER    := NosferatuProject
+PRODUCT_MODEL           := NosferatuOS-v1.0
+
+# --- Performance & Low-RAM Tuning ---
+# Global optimizations for devices with 1GB RAM or less
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true \
     ro.config.max_starting_bg=2 \
-    config.disable_rtt=true \
-    config.disable_bluetooth=true \
     debug.sf.nobootanimation=1 \
-    ro.config.hw_quickboot=true
+    ro.config.hw_quickboot=true \
+    persist.sys.force_highendgfx=false
 
-# --- Rimozione App Superflue (Debloat iniziale) ---
+# Custom system props
+TARGET_DEVICE_SYS_PROPS += device/nosferatu/common/system.prop
+
+# ===== App customizations include + exclude + overrides ===== #
 PRODUCT_PACKAGES += \
-    ExactCalculator \
-    Calendar \
-    Email \
-    Gallery2 \
-    Music \
-    QuickSearchBox
+    KOReader \
+    NosferatuLauncher 
+
+PRODUCT_COPY_FILES += \
+    vendor/nosferatu/configs/preferred-apps.xml:system/etc/preferred-apps.xml
